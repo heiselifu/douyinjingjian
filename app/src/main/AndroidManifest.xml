@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="false"
+        android:label="抖音精简"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
+
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:exported="true"
+            android:label="抖音精简">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 供抖音进程跨进程读取规则文本（只读，无写入能力） -->
+        <provider
+            android:name=".DyPrefsProvider"
+            android:authorities="${applicationId}.prefs"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>

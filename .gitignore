@@ -1,0 +1,19 @@
+# Gradle
+.gradle/
+.gradle-tmp/
+build/
+local.properties
+
+# Kotlin
+.kotlin/
+
+# IDE
+.idea/
+*.iml
+*.hprof
+
+# 本地产物
+*.apk
+*.aab
+*.jks
+*.keystore
